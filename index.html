@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rindou Works（リンドウワークス）｜Relacia 相関図アプリ</title>
+<meta name="description" content="Rindou Works（リンドウワークス）は、モバイルアプリの企画・開発・販売を行う個人事業です。相関図アプリ Relacia（リレイシア）を開発しています。">
+<style>
+  :root {
+    --bg: #f6f6fb;
+    --ink: #1f1d3a;
+    --muted: #5d5b7a;
+    --gentian: #4b3fa3;
+    --soft: #8a84c9;
+    --line: #dcdaee;
+    --white: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { color-scheme: light; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", Meiryo, sans-serif;
+    line-height: 1.8;
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: var(--gentian); text-underline-offset: 3px; }
+  a:focus-visible { outline: 3px solid var(--soft); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 28px 0 0; }
+  .brand { font-weight: 700; letter-spacing: .02em; font-size: 1.05rem; }
+  .brand span { color: var(--muted); font-weight: 400; margin-left: .6em; font-size: .9rem; }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 56px 0 64px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(1.9rem, 5.2vw, 2.9rem);
+    line-height: 1.35;
+    margin: 0 0 20px;
+    letter-spacing: .01em;
+  }
+  .hero p { margin: 0 0 12px; max-width: 34em; color: var(--muted); }
+  .badge {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 14px;
+    border: 1.5px solid var(--gentian);
+    color: var(--gentian);
+    border-radius: 999px;
+    font-size: .9rem;
+    font-weight: 600;
+  }
+  figure { margin: 0; }
+  figure svg { width: 100%; height: auto; display: block; }
+  figcaption { font-size: .85rem; color: var(--muted); margin-top: 8px; }
+  .legend { display: inline-flex; align-items: center; gap: 8px; margin-right: 20px; }
+  .legend svg { width: 36px; height: 8px; }
+
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.35rem; margin: 0 0 24px; }
+  dl { margin: 0; display: grid; grid-template-columns: 1fr; gap: 18px 40px; }
+  dt { font-weight: 700; }
+  dd { margin: 2px 0 0; color: var(--muted); }
+
+  .about p { margin: 0 0 8px; max-width: 38em; }
+  table { border-collapse: collapse; width: 100%; max-width: 38em; }
+  th, td { text-align: left; padding: 10px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { width: 8em; font-weight: 600; color: var(--muted); }
+
+  footer { border-top: 1px solid var(--line); padding: 32px 0 56px; font-size: .9rem; color: var(--muted); }
+  footer ul { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-wrap: wrap; gap: 8px 24px; }
+
+  @media (min-width: 760px) {
+    .hero { grid-template-columns: 1fr 1fr; gap: 56px; }
+    dl { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">Rindou Works<span>リンドウワークス</span></div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <div>
+        <h1>人物のつながりを、<br>線で描く。</h1>
+        <p>Relacia（リレイシア）は、小説やドラマに登場する人物の関係を整理する相関図アプリです。確かな関係は実線、まだ推測の段階の関係は点線で描き分けられます。</p>
+        <p>ミステリーを読みながら、観ながら、謎が解けるたびに線を足していけます。</p>
+        <span class="badge">Android向けに公開準備中</span>
+      </div>
+
+      <figure>
+        <svg viewBox="0 0 480 360" role="img" aria-label="人物5人の相関図の例。実線でつながる関係と、点線でつながる推測の関係がある。">
+          <g stroke-width="2.5" stroke-linecap="round" fill="none">
+            <!-- 確定（実線） -->
+            <g stroke="#4b3fa3">
+              <line x1="240" y1="70" x2="90" y2="170"/>
+              <line x1="240" y1="70" x2="390" y2="170"/>
+              <line x1="90" y1="170" x2="160" y2="300"/>
+              <line x1="390" y1="170" x2="330" y2="300"/>
+            </g>
+            <!-- 推測（点線） -->
+            <g stroke="#8a84c9" stroke-dasharray="2 8">
+              <line x1="90" y1="170" x2="390" y2="170"/>
+              <line x1="160" y1="300" x2="330" y2="300"/>
+            </g>
+          </g>
+          <g font-size="12" fill="#5d5b7a" text-anchor="middle">
+            <text x="150" y="108">依頼</text>
+            <text x="337" y="108">雇用</text>
+            <text x="240" y="161">？</text>
+            <text x="245" y="291">？</text>
+          </g>
+          <g fill="#ffffff" stroke="#4b3fa3" stroke-width="2.5">
+            <circle cx="240" cy="70" r="36"/>
+            <circle cx="90" cy="170" r="36"/>
+            <circle cx="390" cy="170" r="36"/>
+            <circle cx="160" cy="300" r="36"/>
+            <circle cx="330" cy="300" r="36"/>
+          </g>
+          <g font-size="15" font-weight="700" fill="#1f1d3a" text-anchor="middle">
+            <text x="240" y="75">探偵</text>
+            <text x="90" y="175">依頼人</text>
+            <text x="390" y="175">秘書</text>
+            <text x="160" y="305">旧友</text>
+            <text x="330" y="305">被害者</text>
+          </g>
+        </svg>
+        <figcaption>
+          <span class="legend"><svg viewBox="0 0 36 8" aria-hidden="true"><line x1="2" y1="4" x2="34" y2="4" stroke="#4b3fa3" stroke-width="2.5" stroke-linecap="round"/></svg>確定</span>
+          <span class="legend"><svg viewBox="0 0 36 8" aria-hidden="true"><line x1="2" y1="4" x2="34" y2="4" stroke="#8a84c9" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 8"/></svg>推測</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <section aria-labelledby="features">
+      <h2 id="features">Relaciaでできること</h2>
+      <dl>
+        <div>
+          <dt>人物をカードにする</dt>
+          <dd>名前や画像、メモを1枚のカードにまとめます。画像は表示位置を調整できます。</dd>
+        </div>
+        <div>
+          <dt>グループで整理する</dt>
+          <dd>家族、容疑者、関係者など、人物をグループにまとめて見渡せます。</dd>
+        </div>
+        <div>
+          <dt>関係を線でつなぐ</dt>
+          <dd>確定した関係は実線、推測は点線。推測が確定したら切り替えられます。</dd>
+        </div>
+        <div>
+          <dt>探す・守る・残す</dt>
+          <dd>検索、ロック、バックアップと復元に対応。PDFとPNGで書き出せます。</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="about" aria-labelledby="about">
+      <h2 id="about">運営者について</h2>
+      <table>
+        <tr><th scope="row">屋号</th><td>Rindou Works（リンドウワークス）</td></tr>
+        <tr><th scope="row">事業内容</th><td>モバイルアプリケーションの企画・開発・販売</td></tr>
+        <tr><th scope="row">お問い合わせ</th><td><a href="mailto:rindouworks.studio@gmail.com">rindouworks.studio@gmail.com</a></td></tr>
+      </table>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <ul>
+      <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+      <li><a href="terms-of-service.html">利用規約</a></li>
+      <!-- 特定商取引法に基づく表記ページを作成したら、下の行のコメントを外してください -->
+      <!-- <li><a href="tokushoho.html">特定商取引法に基づく表記</a></li> -->
+    </ul>
+    <div>&copy; 2026 Rindou Works</div>
+  </div>
+</footer>
+
+</body>
+</html>
